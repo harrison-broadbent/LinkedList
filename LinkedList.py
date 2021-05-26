@@ -1,6 +1,8 @@
 ###################################################################
 # Harrison Broadbent                                              #
 # StartMate Student Fellowship submission - Backend Engineering   #
+# Github - https://github.com/harrison-broadbent/LinkedList       #
+# Replit - https://replit.com/join/emszlrgk-harrisonbroadbent     #
 #                                                                 #
 # Task: Create a LinkedList                                       #
 ###################################################################
@@ -10,8 +12,8 @@
 #   self.data: int
 #   self.next: Node
 #
-# Basic Node class for the LinkedList
-# LinkedList is composed of Node instances strung together
+# Basic Node class for the LinkedList.
+# LinkedList is composed of Node instances strung together.
 class Node:
     def __init__(self, data):
         self.data = data
@@ -24,17 +26,17 @@ class Node:
 # LinkedList() -
 #   self.head: Node
 #
-#   - addFirst(int e) : adds an element e to the front of the list
-#   - addLast(int e)  : adds an element e to the end of the list
-#   - removeLast()    : removes the last element of the list and returns it
-#   - removeFirst()   : removes the first element of the list and returns it
-#   - getFirst()      : returns the value of the first element in the list
-#   - getLast()       : returns the value of the last element in the list
-#   - reverse()       : reverses the LinkedList
-#   - showList()      : prints the list out
+#   - addFirst(int e) : adds an element e to the front of the list.
+#   - addLast(int e)  : adds an element e to the end of the list.
+#   - removeLast()    : removes the last element of the list and returns it.
+#   - removeFirst()   : removes the first element of the list and returns it.
+#   - getFirst()      : returns the value of the first element in the list.
+#   - getLast()       : returns the value of the last element in the list.
+#   - reverse()       : reverses the LinkedList.
+#   - showList()      : prints the list out.
 #
 #
-# LinkedList class representing a chain of Nodes
+# LinkedList class representing a chain of Nodes.
 class LinkedList:
     def __init__(self):
         self.head = None
@@ -51,7 +53,7 @@ class LinkedList:
     # and add it to the front of the LinkedList.
     # Runtime: O(1)
     #
-    # INPUT: (int) element to add
+    # INPUT: (int) element to add.
     # OUTPUT: void
     def addFirst(self, e):
         new_node = Node(e)
@@ -63,7 +65,7 @@ class LinkedList:
     # and add it to the end of the LinkedList.
     # Runtime: O(n)
     #
-    # INPUT: (int) e to add
+    # INPUT: (int) e to add.
     # OUTPUT: void
     def addLast(self, e):
 
@@ -80,7 +82,7 @@ class LinkedList:
     # Runtime: O(n)
     #
     # INPUT: void
-    # OUTPUT: (int) element removed
+    # OUTPUT: (int) element removed.
     def removeLast(self):
         if self.head is None:
             return None
@@ -103,7 +105,7 @@ class LinkedList:
     # Runtime: O(1)
     #
     # INPUT: void
-    # OUTPUT: (int) element removed
+    # OUTPUT: (int) element removed.
     def removeFirst(self):
         if self.head:
             removed_element = self.head.data
@@ -112,22 +114,22 @@ class LinkedList:
         else:
             return None
 
-    # getFirst(): returns the first Node of the LinkedList
+    # getFirst(): returns the first Node of the LinkedList.
     # Runtime: O(1)
     #
     # INPUT: void
-    # OUTPUT: (int) first element of list
+    # OUTPUT: (int) first element of list.
     def getFirst(self):
         if self.head:
             return self.head.data
         else:
             return None
 
-    # getLast(): returns the last Node of the LinkedList
+    # getLast(): returns the last Node of the LinkedList.
     # Runtime: O(n)
     #
     # INPUT: void
-    # OUTPUT: (int) last element of list
+    # OUTPUT: (int) last element of list.
     def getLast(self):
         if self.head:
             header_pointer = self.head
@@ -137,7 +139,7 @@ class LinkedList:
         else:
             return None
 
-    # reverse(): reverses the LinkedList, mutating the existing list
+    # reverse(): reverses the LinkedList, mutating the existing list.
     # Runtime: O(n^2)
     #
     # INPUT: void
@@ -158,7 +160,7 @@ class LinkedList:
         else:
             return None
 
-    # showList(): prints the LinkedList
+    # showList(): prints the LinkedList.
     # Runtime: O(n)
     #
     # INPUT: void
