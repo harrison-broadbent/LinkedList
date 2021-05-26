@@ -16,7 +16,7 @@
 # LinkedList is composed of Node instances strung together.
 class Node:
     def __init__(self, data):
-        self.data = data
+        self.data = int(data)
         self.next = None
 
     def __repr__(self):
@@ -69,13 +69,15 @@ class LinkedList:
     # OUTPUT: void
     def addLast(self, e):
 
-        new_node = Node(e)
+        if self.head is None:
+            self.head = Node(e)
 
-        header_pointer = self.head
-        while header_pointer.next is not None:
-            header_pointer = header_pointer.next
+        else:
+            header_pointer = self.head
+            while header_pointer.next is not None:
+                header_pointer = header_pointer.next
 
-        header_pointer.next = new_node
+            header_pointer.next = Node(e)
 
     # removeLast(): removes the last Node from the LinkedList,
     # returning the removed Node.
@@ -85,7 +87,7 @@ class LinkedList:
     # OUTPUT: (int) element removed.
     def removeLast(self):
         if self.head is None:
-            return None
+            raise IndexError("No elements exist in the list.")
 
         if self.head.next is None:
             removed_element = self.head.data
@@ -112,9 +114,9 @@ class LinkedList:
             self.head = self.head.next
             return removed_element
         else:
-            return None
+            raise IndexError("No elements exist in the list.")
 
-    # getFirst(): returns the first Node of the LinkedList.
+    # getFirst(): returns the first Node value of the LinkedList.
     # Runtime: O(1)
     #
     # INPUT: void
@@ -125,7 +127,7 @@ class LinkedList:
         else:
             return None
 
-    # getLast(): returns the last Node of the LinkedList.
+    # getLast(): returns the last Node value of the LinkedList.
     # Runtime: O(n)
     #
     # INPUT: void
