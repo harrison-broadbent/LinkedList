@@ -38,9 +38,12 @@ class Node:
 #
 # LinkedList class representing a chain of Nodes.
 class LinkedList:
+
+    # Runtime: O(1)
     def __init__(self):
         self.head = None
 
+    # Runtime: O(n)
     def __repr__(self):
         node = self.head
         nodes = []
@@ -142,7 +145,7 @@ class LinkedList:
             return None
 
     # reverse(): reverses the LinkedList, mutating the existing list.
-    # Runtime: O(n^2)
+    # Runtime: O(n)
     #
     # INPUT: void
     # OUTPUT: void
