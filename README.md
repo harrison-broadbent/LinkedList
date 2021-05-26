@@ -1,5 +1,9 @@
 # LinkedList
 
+> Harrison Broadbent - [About me](https://www.harrisonbroadbent.com/about)
+
+> Startmate Fellowship Backend challenge submission.
+
 Python implementation of a linked list.
 
 Submission for the take-home assesment portion of the [StartMate Student Fellowship](https://startmate.com/students).
